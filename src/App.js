@@ -11,7 +11,7 @@ import Tables from './Tables';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 
-const serverURL = 'http://magic-cashbox-server.herokuapp.com';
+const serverURL = 'https://magic-cashbox-server.herokuapp.com';
 //const serverURL = 'http://localhost:3001';
 
 
