@@ -9,6 +9,7 @@ class Tables extends Component {
 
                 {
                     _.map(this.props.data, (item) => {
+                        console.log(item)
                         return (
                             <div style={{ flexDirection: 'row' }}>
                                 <table>
@@ -48,11 +49,16 @@ class Tables extends Component {
                                         <td>Gain</td>
                                     </tr>
                                     {
-                                        _.map(item.history, (single) =>
-                                            <tr>
-                                                <td>{single.date.substring(11,19)}</td>
-                                                <td>{single.cashChange}</td>
-                                            </tr>
+                                        _.map(item.history, (single) => {
+                                            console.log(single.date);
+                                            return (
+                                                <tr>
+                                                    <td>{single.date._d.substring(11,19)}</td>
+                                                    <td>{single.cashChange}</td>
+                                                </tr>
+                                            )
+                                        }
+
                                         )
                                     }
                                 </table>
